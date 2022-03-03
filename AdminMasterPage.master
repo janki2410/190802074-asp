@@ -33,6 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+<form id="form1" runat="server">
     <section id="container">
 <!--header start-->
 <header class="header fixed-top clearfix">
@@ -240,9 +241,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="dropdown-menu extended logout">
                 <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <form id = "form1" runat="server">
+                x
                 <li><a href="Login.aspx"><i class="fa fa-key"></i>Logout </a></li>
-          </form>
+          
             </ul>
         </li>
         
@@ -276,6 +277,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="glyphicon.html">glyphicon</a></li>
                         <li><a href="grids.html">Grids</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="ManageUser.aspx">
+                        <i class="fa fa-user"></i>
+                        <span>Manage User </span>
+                    </a>
                 </li>
                 <li>
                     <a href="fontawesome.html">
@@ -357,8 +364,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </aside>
 <!--sidebar end-->
 <!--main content start-->
+<section id="main-content">
 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-</section>
+
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
@@ -366,6 +374,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		  </div>
   <!-- / footer -->
+  </section>
 </section>
 <script src="src/js/bootstrap.js"></script>
 <script src="src/js/jquery.dcjqaccordion.2.7.js"></script>
@@ -462,5 +471,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	</script>
 	<!-- //calendar -->
+    </form>
 </body>
 </html>
