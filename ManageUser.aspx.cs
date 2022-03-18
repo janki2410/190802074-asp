@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         Button btn = (Button)sender;
-        SqlDataAdapter adpt = new SqlDataAdapter("SELECT [id], [name], [email], [password] FROM [users] WHERE [id] =" + btn.CommandArgument,con);
+        SqlDataAdapter adpt = new SqlDataAdapter("SELECT [id], [name], [email], [password] FROM [users] WHERE [id] =" + btn.CommandArgument, con);
         DataTable dt = new DataTable();
         adpt.Fill(dt);
         TextBox1.Text = dt.Rows[0][1].ToString();
