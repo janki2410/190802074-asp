@@ -32,8 +32,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<h2>Sign In Now</h2>
         
 		<form id="form1" runat="server">
-			
+		
         <asp:TextBox ID="TextBox1" runat="server" class="ggg" name="Email" placeholder="E-MAIL"></asp:TextBox>
+    
+    <br />
 	
         <asp:TextBox ID="TextBox2" runat="server" class="ggg" name="Password" placeholder="PASSWORD"></asp:TextBox>
         <span><input type="checkbox" />Remember Me</span>
@@ -43,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <asp:Button ID="Button1" runat="server" Text="Login"  value="Sign In" 
             onclick="Button1_Click"/>
 		</form>
-		<p>Don't Have an Account ?<a href="registration.html">Create an account</a></p>
+		<p>Don't Have an Account ?<a href="Register.aspx">Create an account</a></p>
 </div>
 </div>
 <script src="src/js/bootstrap.js"></script>

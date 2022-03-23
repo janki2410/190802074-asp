@@ -59,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             onclick="Button1_Click" />
 				
 		</form>
-		<p>Already Registered.<a href="login.html">Login</a></p>
+		<p>Already Registered.<a href="Login.aspx">Login</a></p>
 </div>
 </div>
 <script src="src/js/bootstrap.js"></script>

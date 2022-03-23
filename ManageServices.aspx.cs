@@ -13,6 +13,7 @@ public partial class _Default : System.Web.UI.Page
     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnectionString1"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
+        print();
         //ConnectionString="<%$ ConnectionStrings:DatabaseConnectionString1 %>" 
         //        DeleteCommand="DELETE FROM [services] WHERE [id] = @id" 
         //        InsertCommand="INSERT INTO [services] ([title], [description], [status]) VALUES (@title, @description, @status)" 
@@ -30,7 +31,7 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Button3_Click(object sender, EventArgs e)
     {
-        if (Button3.Text == "Submit")
+        if (Button3.Text == "submit")
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO [services] ([title], [description], [status]) VALUES (@title, @description, @status)", con);
             cmd.Parameters.AddWithValue("@title", TextBox1.Text);
@@ -59,8 +60,8 @@ public partial class _Default : System.Web.UI.Page
         else
         {
             SqlCommand cmd = new SqlCommand("UPDATE [services] SET [title] = @title, [description] = @description, [status] = @status WHERE [id] = @id", con);
-            cmd.Parameters.AddWithValue("@title", TextBox1.Text);
-            cmd.Parameters.AddWithValue("@description", TextBox2.Text);
+            cmd.Parameters.AddWithValue("@title", TextBox1.Text.Trim());
+            cmd.Parameters.AddWithValue("@description", TextBox2.Text.Trim());
             cmd.Parameters.AddWithValue("@status", RadioButtonList1.SelectedValue);
             cmd.Parameters.AddWithValue("@id", ViewState["service_id"]);
             con.Open();
@@ -72,7 +73,7 @@ public partial class _Default : System.Web.UI.Page
                 TextBox2.Text = string.Empty;
                 RadioButtonList1.ClearSelection();
                 print();
-                Button3.Text = "Submit";
+                Button3.Text = "submit";
                 Literal1.Text = "Service updated ";
             }
             else

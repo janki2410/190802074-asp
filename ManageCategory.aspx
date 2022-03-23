@@ -18,11 +18,18 @@
 
                                   <label for="exampleInputEmail1">Category</label>
                                   <asp:TextBox ID="TextBox1" runat="server" class="form-control"   placeholder="Enter name"></asp:TextBox>
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                                        ErrorMessage="Insert category" Display="Dynamic" ControlToValidate="TextBox1" 
+                                        ForeColor="Red"></asp:RequiredFieldValidator>
                                  </div>
                                <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                                    <asp:ListItem Value="1">Active</asp:ListItem>
                                    <asp:ListItem Value="0">Inactive</asp:ListItem>
+                                   
                                 </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                                    Display="Dynamic" ErrorMessage="Select Status" 
+                                    ControlToValidate="RadioButtonList1" ForeColor="Red"></asp:RequiredFieldValidator>
                                 
                               <asp:Button ID="Button3" runat="server" Text="Submit"  class="btn btn-info" 
                                     onclick="Button3_Click" ></asp:Button>
@@ -65,6 +72,7 @@
                                     </Columns>
                                 </asp:GridView>
                                   
+    </div>
     </div>
     </div>
     </div>

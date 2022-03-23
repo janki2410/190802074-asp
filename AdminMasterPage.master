@@ -238,7 +238,7 @@
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><asp:LinkButton ID="LinkButton1" runat="server"><i class="fa fa-key"></i>LogOut</asp:LinkButton></li>
+                <li><asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click"><i class="fa fa-key"></i>LogOut</asp:LinkButton></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -279,7 +279,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="ManageService.aspx">
+                    <a href="ManageServices.aspx">
                         <i class="fa fa-tasks"></i>
                         <span>Manage Service </span>
                     </a>
